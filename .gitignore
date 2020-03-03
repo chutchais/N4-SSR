@@ -1,0 +1,5 @@
+src/db.sqlite3
+src/files
+src/*.py[cod]
+
+env

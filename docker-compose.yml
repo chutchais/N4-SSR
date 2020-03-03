@@ -1,0 +1,47 @@
+# docker-compose.yml
+
+version: '3'
+
+services:
+  postgres:
+    restart: always
+    image: postgres:latest
+    container_name: postgres-ssr
+    ports:
+      - "5434:5432"
+    networks:
+      - main
+    volumes:
+      - pgdata:/var/lib/postgresql/ssr/
+
+  ssr-server:
+    container_name: ssr-server
+    restart: always
+    build: ./src
+    expose:
+      - "8000"
+    links:
+      - postgres:postgres
+      # - redis:redis
+    networks:
+      - main
+    volumes:
+      - web-django:/usr/src/app
+      - web-static:/staticfiles
+    # env_file: .env
+    command: gunicorn equipment_rental.wsgi:application -w 2 -b :8000
+    ports:
+      - 8001:8000
+
+# gunicorn --workers=3 wmp.wsgi -b 0.0.0.0:8000
+
+
+
+volumes:  
+  cache_data:
+  web-django:
+  web-static:
+  pgdata:
+
+networks:
+  main:
