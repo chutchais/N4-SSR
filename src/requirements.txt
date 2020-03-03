@@ -1,5 +1,5 @@
-Django==2.2.7
-djangorestframework==3.8.2
+Django==2.2.10
+djangorestframework==3.9.1
 django-filter
 django-import-export
 gunicorn==19.9.0
