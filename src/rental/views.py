@@ -35,7 +35,10 @@ def get_rental(terminal,str_start_date,str_stop_date,detail):
 		# print(kind['name'],x,y)
 		kind['total_hours'] 		=	x
 		kind['total_containers'] 	=	y
-	return kind_list
+
+	lst =[ kind   for kind in kind_list if kind['total_hours'] > 0]
+	# print(lst)
+	return lst
 
 
 
