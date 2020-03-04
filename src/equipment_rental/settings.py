@@ -10,6 +10,17 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
+import environ
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
+# reading .env file
+environ.Env.read_env()
+
+# False if not in os.environ
+# DEBUG = env('DEBUG')
+
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -20,10 +31,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '4el3-!+u#3u=839*v1pujso5&w@h9is7906hh@alk7q$$ifwlw'
+# SECRET_KEY = '4el3-!+u#3u=839*v1pujso5&w@h9is7906hh@alk7q$$ifwlw'
+SECRET_KEY = env('SECRET_KEY')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+
+# False if not in os.environ
+DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = ['*']
 
@@ -77,6 +93,14 @@ WSGI_APPLICATION = 'equipment_rental.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# Parse database connection url strings like psql://user:pass@127.0.0.1:8458/db
+# DATABASES = {
+#     # read os.environ['DATABASE_URL'] and raises ImproperlyConfigured exception if not found
+#     'default': env.db(),
+#     # read os.environ['SQLITE_URL']
+#     'extra': env.db('SQLITE_URL', default='sqlite:////db.sqlite3')
+# }
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
@@ -87,11 +111,11 @@ WSGI_APPLICATION = 'equipment_rental.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': 'postgres-ssr',
-        'PORT': '5432'
+        'NAME':     env('DB_NAME'),
+        'USER':     env('DB_USER'),
+        'PASSWORD': env('DB_PASS'),
+        'HOST':     env('DB_HOST'),
+        'PORT':     env('DB_PORT')
     }
 }
 
