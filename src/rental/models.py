@@ -16,6 +16,8 @@ class Kind(models.Model):
 									),
 								])
 	title 			= models.CharField(max_length=50,blank=True, null=True,)
+	trans_time 		= models.FloatField(verbose_name='AVG transportation time(minutes/day)',default=10)
+	handling_time 	= models.FloatField(verbose_name='AVG handling time(minutes/box)',default=2)
 	created		 	= models.DateTimeField(auto_now_add=True)
 	modified		= models.DateTimeField(auto_now=True)
 	user 			= models.ForeignKey(settings.AUTH_USER_MODEL,

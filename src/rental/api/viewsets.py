@@ -5,6 +5,9 @@ from rest_framework.response import Response
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.permissions import IsAuthenticated
 
+from rest_framework.views import APIView
+from rest_framework.response import Response
+
 from rental.models import Rental
 from rental.api.serializers import RentalSerializer
 
@@ -37,3 +40,4 @@ class RentalViewSet(CreateListModelMixin,viewsets.ModelViewSet):
 	def perform_create(self, serializer):
 		serializer.save(user=self.request.user)
 	# lookup_field = 'slug'
+

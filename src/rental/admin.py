@@ -40,7 +40,7 @@ admin.site.register(Rental,RentalAdmin)
 class KindAdmin(admin.ModelAdmin):
     search_fields       = ['name','title']
     list_filter         = []
-    list_display        = ('name','title','created','modified')
+    list_display        = ('name','title','trans_time','handling_time','modified')
     readonly_fields     = ('created','modified','user')
 
     save_as             = True
@@ -48,7 +48,7 @@ class KindAdmin(admin.ModelAdmin):
     save_on_top         = True
 
     fieldsets = [
-        ('Basic Information',{'fields': ['name','title']}),
+        ('Basic Information',{'fields': ['name','title','trans_time','handling_time']}),
         ('System Information',{'fields':['user','created','modified']})
     ]
 

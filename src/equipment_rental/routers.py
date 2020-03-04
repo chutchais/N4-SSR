@@ -15,6 +15,7 @@ class Router(routers.DefaultRouter):
 # router = routers.DefaultRouter()
 router = Router()
 
+
 router.register(r'rental', RentalViewSet)
 router.register(r'ssr', SsrViewSet)
 

@@ -25,6 +25,7 @@ from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path('rental/', include(('rental.urls','rental'),namespace='rental')),
     url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT},name='ssrfiles-detail'),  
 ]
 
