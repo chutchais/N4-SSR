@@ -78,3 +78,11 @@ class Rental(models.Model):
 
 	def get_absolute_url(self):
 		return reverse('rental:detail', kwargs={'pk': self.pk})
+
+
+# Report
+class RentalDailySummary(Rental):
+    class Meta:
+        proxy = True
+        verbose_name = 'Rental Summary'
+        verbose_name_plural = 'Rental Summary'

@@ -4,3 +4,4 @@ django-filter
 django-import-export
 gunicorn==19.9.0
 django-environ
+django-admin-lightweight-date-hierarchy
