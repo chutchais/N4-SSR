@@ -30,7 +30,7 @@ services:
     networks:
       - main
     volumes:
-      - web-django:/usr/src/app
+      # - web-django:/usr/src/app
       - web-static:/staticfiles
     # env_file: .env
     command: gunicorn equipment_rental.wsgi:application -w 2 -b :8000
@@ -43,7 +43,7 @@ services:
 
 volumes:  
   cache_data:
-  web-django:
+  # web-django:
   web-static:
   pgdata:
 

@@ -19,7 +19,7 @@ ENV LIBRARY_PATH=/lib:/usr/lib
 WORKDIR /usr/src/ssr
 COPY ./requirements.txt /usr/src/ssr
 
-#RUN pip install --upgrade pip
+RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 #ENTRYPOINT ["python"]

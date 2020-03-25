@@ -26,7 +26,7 @@ class Department(models.Model):
 
 class Ssr(models.Model):
 	number 			= models.SlugField(unique=True,blank=True, null=True)  
-	title 			= models.CharField(max_length=50,blank=True, null=True)
+	title 			= models.CharField(max_length=100)
 	department 		= models.ForeignKey(Department,
 							blank=True,null=True,
 							on_delete=models.CASCADE,
@@ -40,7 +40,7 @@ class Ssr(models.Model):
 						blank=True,null=True)
 	
 	def __str__(self):
-		return ('%s' % (self.number))
+		return ('%s' % (self.pk))
 
 	def get_absolute_url(self):
 		return reverse('ssr:detail', kwargs={'number': self.number})
@@ -51,26 +51,26 @@ class Ssr(models.Model):
 		return qty
 	total_file.fget.short_description = "Total files"
 
-# def create_ssr_number(instance, new_slug=None):
-# 	# import datetime
-# 	from datetime import datetime
-# 	now = datetime.now() # current date and time
-# 	default_slug = '%s-%s' % (instance.department,now.strftime('%y%m%d%H%M%S'))
-# 	slug = slugify(default_slug)
-# 	if new_slug is not None:
-# 		slug = new_slug
-# 	qs = Ssr.objects.filter(number=new_slug)
-# 	exists = qs.exists()
-# 	if exists:
-# 		new_slug = "%s-%s" %(slug,qs.count())
-# 		return create_ssr_number(instance, new_slug=new_slug)
-# 	return slug
+def create_ssr_number(instance, new_slug=None):
+	# import datetime
+	from datetime import datetime
+	now = datetime.now() # current date and time
+	default_slug = '%s-%s' % (instance.department,now.strftime('%y%m%d%H%M%S'))
+	slug = slugify(default_slug)
+	if new_slug is not None:
+		slug = new_slug
+	qs = Ssr.objects.filter(number=new_slug)
+	exists = qs.exists()
+	if exists:
+		new_slug = "%s-%s" %(slug,qs.count())
+		return create_ssr_number(instance, new_slug=new_slug)
+	return slug
 
-# def pre_save_ssr_receiver(sender, instance, *args, **kwargs):
-# 	if not instance.number:
-# 		instance.number = create_ssr_number(instance)
+def pre_save_ssr_receiver(sender, instance, *args, **kwargs):
+	if not instance.number:
+		instance.number = create_ssr_number(instance)
 
-# pre_save.connect(pre_save_ssr_receiver, sender=Ssr)
+pre_save.connect(pre_save_ssr_receiver, sender=Ssr)
 
 
 def content_file_name(instance, filename):
