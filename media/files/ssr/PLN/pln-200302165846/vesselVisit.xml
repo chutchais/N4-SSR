@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<argo:snx xmlns:argo="http://www.navis.com/argo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.navis.com/argo snx.xsd">
+<vessel-visit id="BPN_20004S" visit-phase="CREATED" vessel-id="BPN" vessel-name="BLUE PAILIN" service-id="BBS " operator-id="BBS" is-common-carrier="N" is-dray-off="N" is-no-client-access="N" out-call-number="1" out-voy-nbr="20004S" in-call-number="1" in-voy-nbr="20004S" classification="BARGE" facility="LCB1" vv-flex-string-1="A0">
+  <lines>
+    <line id="BBS" in-voy-nbr="20004S" out-voy-nbr="20004S" />
+  </lines>
+</vessel-visit>
+<vessel-visit id="BPN_20006N" visit-phase="CREATED" vessel-id="BPN" vessel-name="BLUE PAILIN" service-id="BBS " operator-id="KRC" is-common-carrier="Y" is-dray-off="N" is-no-client-access="N" out-call-number="1" out-voy-nbr="20006N" in-call-number="1" in-voy-nbr="20006N" classification="DEEPSEA" facility="LCB1" vv-flex-string-1="B1">
+  <lines>
+    <line id="KRC" in-voy-nbr="20006N" out-voy-nbr="20006N" />
+  </lines>
+</vessel-visit>
+</argo:snx>
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<argo:snx xmlns:argo="http://www.navis.com/argo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.navis.com/argo snx.xsd">
+<container eqid="MNBU3212666" type="45R1" created-by="-edi-" created-date="2019-11-21T14:01:03" class="CTR" tank-rails="UNKNOWN" life-cycle-state="ACT">
+  <physical has-wheels="N" height-mm="2896" is-insulated="N" is-permanently-out-of-service="N" iso-group="RT" length-mm="12192" material="UNKNOWN" strength-code="FB" tare-weight-kg="4150.0" width-mm="2438" />
+  <ownership owner="MSK" operator="MSK" />
+  <restrictions is-open="N" is-unsealable="N" no-top_stow-if-empty="N" no-top-stow-if-full="N" out-of-gauge-ok="N" safe-weight-kg="0.0" stow-above-deck="N" stow-below-deck="N" uses-accessories="N" />
+  <transponder />
+  <reefer is-controlled-atmosphere="N" is-starvent="N" is-super-freeze="N" is-temperature-controlled="Y" rfr-type="INTEG_AIR" />
+</container>
+<booking nbr="606828083" line="MSK" pol="THLCH" pol-name="Thailand" pod-1="MYTPP" pod-1-name="Malaysia" eq-status="FCL" shipper-id="43501946BKK" shipper-name="C P MERCHANDISING COMPANY LIMITED" agent-id="MSK" ood="N" override-cutoff="N" hold-partials="N" prevent-type-subst="N" category="EXPORT" created-by="-edi-" created-date="2019-11-20T14:00:15" modified-by="-edi-" modified-date="2019-11-21T14:01:03" quantity="1">
+  <carrier id="H7M_941E-948W" facility="LCB1" mode="VESSEL" />
+  <items>
+    <item qty="1" eq-size="NOM40" eq-iso-group="RT" eq-height="NOM96" eq-iso-group-description="Refrigerated and heated" equipment-type="45R1" equip-type-description="40ft hi-cube reefer" eq-material="UNKNOWN" gross-weight="24000.0" commodity-name="POULTRY, CHICKEN, TURKEY, DUCK, FOWL, FROZEN" created-by="-edi-" created-date="2019-11-20T14:00:15" modified-by="-edi-" modified-date="2019-11-21T14:01:03">
+      <hazards />
+      <reefer temp-reqd-c="-20.0" />
+      <oog />
+      <reserved-containers>
+        <reserved-container equip-number="MNBU3212666" />
+      </reserved-containers>
+    </item>
+  </items>
+  <hazards />
+</booking>
+<unit id="MNBU3212666" category="EXPORT" restow="NONE" transit-state="INBOUND" freight-kind="FCL" line="MSK" unique-key="MNBU3212666" agent1="MSK" is-verified-yard-pos="N" is-stowplan-posted="N">
+  <equipment eqid="MNBU3212666" type="45R1" created-by="-edi-" created-date="2019-11-21T14:01:03" class="CTR" tank-rails="UNKNOWN" life-cycle-state="ACT" role="PRIMARY">
+    <physical has-wheels="N" height-mm="2896" is-insulated="N" is-permanently-out-of-service="N" iso-group="RT" length-mm="12192" material="UNKNOWN" strength-code="FB" tare-weight-kg="4150.0" width-mm="2438" />
+    <ownership owner="MSK" operator="MSK" />
+    <restrictions is-open="N" is-unsealable="N" no-top_stow-if-empty="N" no-top-stow-if-full="N" out-of-gauge-ok="N" safe-weight-kg="0.0" stow-above-deck="N" stow-below-deck="N" uses-accessories="N" />
+    <transponder />
+    <reefer is-controlled-atmosphere="N" is-starvent="N" is-super-freeze="N" is-temperature-controlled="Y" rfr-type="INTEG_AIR" />
+    <damages />
+  </equipment>
+  <position loc-type="TRUCK" location="GEN_TRUCK" />
+  <routing pol="THLCH" pol-name="Thailand" pod-1="MYTPP" pod-1-name="Malaysia">
+    <carrier direction="IB" qualifier="DECLARED" mode="TRUCK" facility="LCB1" />
+    <carrier direction="IB" qualifier="ACTUAL" mode="TRUCK" facility="LCB1" />
+    <carrier direction="OB" qualifier="DECLARED" mode="VESSEL" facility="LCB1" id="H7M_941E-948W" />
+    <carrier direction="OB" qualifier="ACTUAL" mode="VESSEL" facility="LCB1" id="H7M_941E-948W" />
+  </routing>
+  <booking id="606828083" />
+  <contents weight-kg="24000.0" />
+  <reefer temp-reqd-c="-20.0" temp-display-unit="C" extended-time-monitors="N" is-power="N" wanted-is-power="N" />
+  <unit-etc category="EXPORT" line="MSK" />
+  <unit-flex unit-flex-1="B1" unit-flex-3="CREDIT" />
+  <ufv-flex ufv-flex-6="PORT" />
+  <timestamps time-last-move="2019-11-21T14:01:03" />
+  <non-move-history>
+    <event id="UNIT_CREATE" time-event-applied="2019-11-21T14:01:03" user-id="user:-edi-" is-billable="N" />
+    <event id="UNIT_ACTIVATE" time-event-applied="2019-11-21T14:01:03" user-id="user:-edi-" is-billable="N" />
+    <event id="UNIT_PREADVISE" time-event-applied="2019-11-21T14:01:03" user-id="user:-edi-" is-billable="N" />
+    <event id="UNIT_NOTICE" note="Clean after marke" time-event-applied="2019-11-21T14:01:03" user-id="user:-edi-" is-billable="N">
+      <field-changes>
+        <field-change id="ufvFlexString10" prev-value="MSK:MYTPP" />
+      </field-changes>
+    </event>
+  </non-move-history>
+</unit>
+</argo:snx>
+

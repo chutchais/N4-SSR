@@ -1,5 +1,7 @@
 src/db.sqlite3
 src/files
+src/media
+src/media/*
 src/*.py[cod]
 
 env

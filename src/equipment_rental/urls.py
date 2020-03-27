@@ -26,15 +26,16 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('rental/', include(('rental.urls','rental'),namespace='rental')),
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT},name='ssrfiles-detail'),  
+    # url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT},name='ssrfiles-detail'),
+    # url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_URL},name='ssrfiles-media'),  
 ]
 
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# if settings.DEBUG:
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 from django.contrib import admin
 
-admin.site.site_header = 'LCB1 SSR&Rental Platform'
-admin.site.site_title = 'LCB1 SSR&Rental Platform'
+admin.site.site_header = 'LCB1 SSR&Rental Platform.'
+admin.site.site_title = 'LCB1 SSR&Rental Platform.'

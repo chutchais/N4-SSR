@@ -3,3 +3,6 @@ files.*
 files/*.*
 files/
 files
+media
+media/
+media/*.*

@@ -35,6 +35,7 @@ class Ssr(models.Model):
 	created		 	= models.DateTimeField(auto_now_add=True)
 	modified		= models.DateTimeField(auto_now=True)
 	completed 		= models.BooleanField(default=False)
+	freeform 		= models.BooleanField(default=False)
 	user 			= models.ForeignKey(settings.AUTH_USER_MODEL,
 						on_delete=models.SET_NULL,
 						blank=True,null=True)

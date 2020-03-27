@@ -32,6 +32,7 @@ services:
     volumes:
       # - web-django:/usr/src/app
       - web-static:/staticfiles
+      - web-media:/media
     # env_file: .env
     command: gunicorn equipment_rental.wsgi:application -w 2 -b :8000
     ports:
@@ -43,7 +44,7 @@ services:
 
 volumes:  
   cache_data:
-  # web-django:
+  web-media:
   web-static:
   pgdata:
 

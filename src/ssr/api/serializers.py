@@ -16,7 +16,7 @@ class SsrSerializer(serializers.ModelSerializer):
 	files = SsrFilesSerializer(many=True, read_only=True)
 	class Meta:
 		model = Ssr
-		fields = ['number','title','completed','files','url']
+		fields = ['number','title','completed','freeform','files','url']
 		lookup_field = 'number'
 		extra_kwargs = {
 			'url': {'lookup_field': 'number'}

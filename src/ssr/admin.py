@@ -32,8 +32,9 @@ class SsrFileInline(admin.TabularInline):
 
 class SsrAdmin(admin.ModelAdmin):
     search_fields       = ['number','title','note']
-    list_filter         = ['completed','department']
-    list_display        = ('number','title','department','total_file','created','modified','completed')
+    list_filter         = ['completed','freeform','department']
+    list_display        = ('number','title','department','total_file',
+                            'freeform','completed','created','modified')
     readonly_fields     = ('created','modified','user')
     readonly_fields     = ('number','created','modified','user')
 
@@ -42,7 +43,7 @@ class SsrAdmin(admin.ModelAdmin):
     save_on_top         = True
 
     fieldsets = [
-        ('Basic Information',{'fields': [('number','completed'),'title','department',
+        ('Basic Information',{'fields': [('number','completed'),'freeform','title','department',
         						'note']}),
         ('System Information',{'fields':['user','created','modified']})
     ]

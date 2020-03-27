@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<argo:snx xmlns:argo="http://www.navis.com/argo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.navis.com/argo snx.xsd">
+<container eqid="BILL1701000" type="22G1" created-by="dcb1093" created-date="2019-12-03T16:20:08" class="CTR" tank-rails="UNKNOWN" life-cycle-state="ACT">
+  <physical has-wheels="N" height-mm="2591" is-insulated="N" is-permanently-out-of-service="N" iso-group="GP" length-mm="6068" material="UNKNOWN" strength-code="TB" tare-weight-kg="1900.0" width-mm="2438" />
+  <ownership owner="MSK" operator="MSK" />
+  <restrictions is-open="N" is-unsealable="N" no-top_stow-if-empty="N" no-top-stow-if-full="N" out-of-gauge-ok="N" safe-weight-kg="0.0" stow-above-deck="N" stow-below-deck="N" uses-accessories="N" />
+  <transponder />
+</container>
+<booking nbr="TESTBILL" line="MSK" pol="THLCH" pol-name="Thailand" pod-1="MYTPP" pod-1-name="Malaysia" eq-status="FCL" shipper-id="LG" shipper-name="LG" agent-id="MSK" ood="N" override-cutoff="N" hold-partials="N" prevent-type-subst="N" category="EXPORT" created-by="dcb1093" created-date="2019-12-03T16:19:34" modified-by="gab2295" modified-date="2019-12-03T16:24:36" quantity="5">
+  <carrier id="BILL_1" facility="LCB1" mode="VESSEL" />
+  <items>
+    <item qty="5" eq-size="NOM20" eq-iso-group="GP" eq-height="NOM86" eq-iso-group-description="General purpose container without ventilation" equipment-type="22G1" equip-type-description="20ft general" eq-material="UNKNOWN" created-by="dcb1093" created-date="2019-12-03T16:19:42">
+      <hazards />
+      <reefer />
+      <oog is-oog="N" />
+      <received-containers>
+        <received-container equip-number="BILL1701000" />
+      </received-containers>
+      <reserved-containers>
+        <reserved-container equip-number="BILL1701000" />
+      </reserved-containers>
+    </item>
+  </items>
+  <hazards />
+</booking>
+<unit id="BILL1701000" category="EXPORT" restow="NONE" transit-state="LOADED" freight-kind="FCL" line="MSK" unique-key="BILL1701000" agent1="MSK" is-ib-to-ob-move-direct="N" is-verified-yard-pos="N" is-stowplan-posted="N">
+  <equipment eqid="BILL1701000" type="22G1" created-by="dcb1093" created-date="2019-12-03T16:20:08" class="CTR" tank-rails="UNKNOWN" life-cycle-state="ACT" role="PRIMARY">
+    <physical has-wheels="N" height-mm="2591" is-insulated="N" is-permanently-out-of-service="N" iso-group="GP" length-mm="6068" material="UNKNOWN" strength-code="TB" tare-weight-kg="1900.0" width-mm="2438" />
+    <ownership owner="MSK" operator="MSK" />
+    <restrictions is-open="N" is-unsealable="N" no-top_stow-if-empty="N" no-top-stow-if-full="N" out-of-gauge-ok="N" safe-weight-kg="0.0" stow-above-deck="N" stow-below-deck="N" uses-accessories="N" />
+    <transponder />
+    <damages />
+  </equipment>
+  <position loc-type="VESSEL" location="BILL_1" slot="011282" />
+  <routing pol="THLCH" pol-name="Thailand" pod-1="MYTPP" pod-1-name="Malaysia">
+    <carrier direction="IB" qualifier="DECLARED" mode="TRUCK" facility="LCB1" />
+    <carrier direction="IB" qualifier="ACTUAL" mode="TRUCK" facility="LCB1" id="45612" />
+    <carrier direction="OB" qualifier="DECLARED" mode="VESSEL" facility="LCB1" id="BILL_1" />
+    <carrier direction="OB" qualifier="ACTUAL" mode="VESSEL" facility="LCB1" id="BILL_1" />
+  </routing>
+  <booking id="TESTBILL" />
+  <contents weight-kg="25000.0" shipper-id="LG" />
+  <verified-gross-mass verified-gross-weight="25000.0" verified-date="2019-12-03T16:24:36" />
+  <unit-etc category="EXPORT" line="MSK" />
+  <unit-flex unit-flex-1="B1" unit-flex-3="CREDIT" />
+  <ufv-flex ufv-flex-7="MSK" ufv-flex-date-2="2019-12-03T16:22:00" />
+  <timestamps time-in="2019-12-03T16:24:57" time-load="2019-12-03T17:03:17" time-last-move="2019-12-03T17:03:17" />
+  <move-history>
+    <move move-kind="RECV" timestamp="2019-12-03T16:24:56" user-id="xps:ECN4/BRTG15/11111">
+      <from-position loc-type="TRUCK" location="45612" />
+      <to-position loc-type="YARD" location="LCB1" slot="04B29A.1" orientation="Y" />
+      <move-details meters-to-start="0" meters-of-carry="0" time-carry-complete="2019-12-03T16:24:56" time-dispatch="2019-12-03T16:24:54" time-put="2019-12-03T16:24:56" rehandle-count="0" was-twin-carry="N" was-twin-fetch="N" was-twin-put="N" che-put="RTG15" che-put-login-name="11111" />
+    </move>
+    <move move-kind="LOAD" timestamp="2019-12-03T17:03:07" user-id="xps:YCB2146:handleShipEntry1">
+      <from-position loc-type="YARD" location="LCB1" slot="04B29A.1" orientation="Y" />
+      <to-position loc-type="VESSEL" location="BILL_1" slot="011282" />
+      <move-details meters-to-start="0" meters-of-carry="0" time-carry-complete="2019-12-03T17:03:07" time-dispatch="2019-12-03T17:02:34" time-fetch="2019-12-03T17:02:35" time-put="2019-12-03T17:03:07" time-carry-che-dispatch="2019-12-03T17:02:23" time-carry-che-fetch-ready="2019-12-03T17:02:35" time-carry-che-put-ready="2019-12-03T17:03:07" rehandle-count="0" was-twin-carry="Y" was-twin-fetch="N" was-twin-put="N" che-carry="TR67" che-put="QC07" che-fetch="RTG07" che-carry-login-name="11111" che-fetch-login-name="11111" che-put-login-name="YCB2146" />
+    </move>
+  </move-history>
+  <non-move-history>
+    <event id="UNIT_CREATE" time-event-applied="2019-12-03T16:20:08" user-id="user:dcb1093" is-billable="N" />
+    <event id="UNIT_ACTIVATE" time-event-applied="2019-12-03T16:20:08" user-id="user:dcb1093" is-billable="N" />
+    <event id="UNIT_PREADVISE" time-event-applied="2019-12-03T16:20:08" user-id="user:dcb1093" is-billable="N" />
+    <event id="UNIT_POSITION_CORRECTION" note="Unit Position Updated" time-event-applied="2019-12-03T16:22:44" user-id="xps:Server:AssignPosition" is-billable="N">
+      <field-changes>
+        <field-change id="posName" new-value="T-45612-TQ" prev-value="T-GEN_TRUCK" />
+        <field-change id="posOrientation" />
+      </field-changes>
+    </event>
+    <event id="UNIT_IN_GATE" time-event-applied="2019-12-03T16:24:33" user-id="user:gab2295" is-billable="Y" />
+    <event id="UNIT_VGM_ASSIGNED" note="VGM Changes" time-event-applied="2019-12-03T16:24:36" user-id="user:gab2295" is-billable="N" related-entity-id="BILL1701000" related-entity-class="Unit">
+      <field-changes>
+        <field-change id="unitGoodsAndCtrWtKgVerfiedGross" new-value="25000.0" />
+        <field-change id="unitVgmVerifiedDate" new-value="20191203162436ICT" />
+      </field-changes>
+    </event>
+    <event id="LIFT_OFF_BY_TRUCK" note="943826" time-event-applied="2019-12-03T16:24:57" user-id="user:-notices-" quantity="1.0" quantity-unit="ITEMS" is-billable="Y" />
+    <event id="VERIFIED_CONFRIM_FOR_LOAD" time-event-applied="2019-12-03T16:54:26" user-id="user:PNB1226" is-billable="N">
+      <field-changes>
+        <field-change id="ufvVerifiedForLoad" new-value="true" prev-value="false" />
+      </field-changes>
+    </event>
+    <event id="STEVEDORAGE_LOAD" note="943907" time-event-applied="2019-12-03T17:03:17" user-id="user:-system-" quantity="1.0" quantity-unit="ITEMS" is-billable="Y" />
+    <event id="WHARFAGE_LOAD" note="943907" time-event-applied="2019-12-03T17:03:17" user-id="user:-system-" quantity="1.0" quantity-unit="ITEMS" is-billable="Y" />
+    <event id="FUEL_SURCHARGE" note="943907" time-event-applied="2019-12-03T17:03:17" user-id="user:-system-" quantity="1.0" quantity-unit="ITEMS" is-billable="Y" />
+  </non-move-history>
+</unit>
+</argo:snx>
+
