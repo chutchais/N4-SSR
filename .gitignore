@@ -1,7 +1,8 @@
 src/db.sqlite3
 src/files
 src/media
-src/media/*
+media
 src/*.py[cod]
+src/ssr/__pycache__/*.*.pyc
 
 env

@@ -71,7 +71,8 @@ def pre_save_ssr_receiver(sender, instance, *args, **kwargs):
 	if not instance.number:
 		instance.number = create_ssr_number(instance)
 
-pre_save.connect(pre_save_ssr_receiver, sender=Ssr)
+# To auto generate ssr number
+# pre_save.connect(pre_save_ssr_receiver, sender=Ssr)
 
 
 def content_file_name(instance, filename):

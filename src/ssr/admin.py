@@ -36,7 +36,7 @@ class SsrAdmin(admin.ModelAdmin):
     list_display        = ('number','title','department','total_file',
                             'freeform','completed','created','modified')
     readonly_fields     = ('created','modified','user')
-    readonly_fields     = ('number','created','modified','user')
+    # readonly_fields     = ('number','created','modified','user')
 
     save_as             = True
     save_as_continue    = True
