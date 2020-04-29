@@ -72,7 +72,7 @@ def pre_save_ssr_receiver(sender, instance, *args, **kwargs):
 		instance.number = create_ssr_number(instance)
 
 # To auto generate ssr number
-# pre_save.connect(pre_save_ssr_receiver, sender=Ssr)
+pre_save.connect(pre_save_ssr_receiver, sender=Ssr)
 
 
 def content_file_name(instance, filename):
